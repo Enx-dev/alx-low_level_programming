@@ -1,7 +1,0 @@
-#!/bin/bash
-chmod 777 .
-git add .
-echo "Enter Commit message"
-read commit
-git commit -m $commit
-git push
