@@ -1,5 +1,5 @@
 #!/bin/bash
-chmod a+x .
+chmod 777 .
 git add .
 echo "Enter Commit message"
 read commit
