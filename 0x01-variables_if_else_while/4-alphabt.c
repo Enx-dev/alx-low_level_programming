@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-
 /**
 * main - Entry point
 *
-* Return: alphabets
+* Return: alphabet without p and e all lowercase
 */
 
 int main(void)
@@ -13,10 +12,11 @@ int main(void)
 
 	while (a < 123)
 	{
-		putchar(a);
+		if (a != 101 && a != 113)
+			putchar(a);
 		a++;
 	}
 	putchar(10);
+
 	return (0);
 }
-
