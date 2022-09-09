@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -t | cat | grep ^[[:digit:]] | head -n 1
