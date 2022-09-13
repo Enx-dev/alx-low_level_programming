@@ -3,18 +3,18 @@
 /**
 * main - Entry Point
 *
-* Return: 0 
+* Return: 0
 */
 
 
-int main()
+int main(void)
 {
 	char *sh = "_putchar";
 
 	while (*sh)
 	{
-	       _putchar(*sh);
-       		sh++;	       
+		putchar(*sh);
+		sh++;
 	}
 
 	_putchar('\n');
