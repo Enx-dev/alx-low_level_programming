@@ -8,8 +8,8 @@
 
 void print_diagonal(int n)
 {
-	int len;
-	int space;
+	int len = 0;
+	int space = 0;
 
 	if (n > 0)
 	{
@@ -20,9 +20,9 @@ void print_diagonal(int n)
 				_putchar(' ');
 				space++;
 			}
-			_putchar('\\');
+			_putchar(92);
 			len++;
-
+			space = 0;
 			_putchar('\n');
 		}
 
