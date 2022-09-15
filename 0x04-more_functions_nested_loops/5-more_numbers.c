@@ -14,7 +14,13 @@ void more_numbers(void)
 	{
 		while (columns <= 14)
 		{
-			_putchar(columns + '0');
+			if (columns > 9)
+			{
+				putchar((columns / 10) + '0');
+				putchar((columns % 10) + '0');
+			}
+			else
+				_putchar(columns + '0');
 			columns++;
 		}
 		columns = 0;
