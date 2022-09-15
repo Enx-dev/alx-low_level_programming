@@ -23,12 +23,10 @@ void print_diagonal(int n)
 			_putchar('\\');
 			len++;
 
-			if (len == n)
-				break;
 			_putchar('\n');
 		}
 
 	}
-
-	_putchar('\n');
+	else
+		_putchar('\n');
 }
