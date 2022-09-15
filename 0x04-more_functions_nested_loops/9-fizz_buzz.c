@@ -13,16 +13,16 @@ int main(void)
 	{
 		start++;
 		if (start % 3 == 0 && start % 5 == 0)
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		else if (start % 3 == 0)
-			printf("Fizz ");
+			printf("Fizz");
 		else if (start % 5 == 0)
-			printf("Buzz ");
+			printf("Buzz");
 		else
 		{
 			printf("%d", start);
-			putchar(' ');
 		}
+		printf(" ");
 
 	}
 	putchar('\n');
