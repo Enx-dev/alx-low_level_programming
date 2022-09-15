@@ -9,7 +9,7 @@ int main(void)
 {
 	int start = 0;
 
-	while (start <= 100)
+	while (start < 100)
 	{
 		start++;
 		if (start % 3 == 0 && start % 5 == 0)
@@ -25,4 +25,5 @@ int main(void)
 		}
 
 	}
+	putchar('\n');
 }
