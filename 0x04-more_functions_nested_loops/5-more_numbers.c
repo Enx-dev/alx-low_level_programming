@@ -16,8 +16,8 @@ void more_numbers(void)
 		{
 			if (columns > 9)
 			{
-				putchar((columns / 10) + '0');
-				putchar((columns % 10) + '0');
+				_putchar((columns / 10) + '0');
+				_putchar((columns % 10) + '0');
 			}
 			else
 				_putchar(columns + '0');
