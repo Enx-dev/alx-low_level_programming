@@ -15,13 +15,8 @@ void more_numbers(void)
 		while (columns <= 14)
 		{
 			if (columns > 9)
-			{
 				_putchar(columns / 10 + '0');
-				_putchar(columns % 10 + '0');
-			}
-			else
-				_putchar(columns + '0');
-
+			_putchar(columns % 10 + '0');
 			columns++;
 		}
 		columns = 0;
