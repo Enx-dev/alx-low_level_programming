@@ -14,7 +14,7 @@ char *leet(char *s)
 	char b[] = "4433007711";
 
 	while (*(s + i))
-	{	
+	{
 		int j = 0;
 
 		while (j <= 9)
