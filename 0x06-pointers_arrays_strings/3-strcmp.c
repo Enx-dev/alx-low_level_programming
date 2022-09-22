@@ -3,7 +3,7 @@
 /**
 * _strcmp - compares two string
 * @s1: frist string
-* @s2 seond string
+* @s2: seond string
 *
 * Return: int
 */
@@ -21,7 +21,6 @@ int _strcmp(char *s1, char *s2)
 		}
 		else
 			return (s1[i] - s2[i]);
-		
 	}
 	return (0);
 }
