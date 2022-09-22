@@ -3,6 +3,10 @@
 
 int main(void)
 {
-	char a = 'a';
-	printf("%c\n", a-32);
+	char a[] = "adejori eniola eniola";
+
+	for (int i = 0; a[i] != '\0'; i++)
+	{
+		printf("%c", a[i]);
+	}
 }
