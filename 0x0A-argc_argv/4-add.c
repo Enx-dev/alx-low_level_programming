@@ -1,30 +1,36 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
-* main - prints file name
-* @argc: amount of aguremnts passed
-* @argv :array of agurements
-*
-* Return: int
-*/
-
+ * main - adds numbers
+ * @argc: number of arguments passed to the function
+ * @argv: argument vector of pointers to strings
+ *
+ * Return: 0 if no errors, else 1
+ */
 int main(int argc, char *argv[])
 {
-	int sum = 0;
-	int i = 1;
+	int a = 0, i = 0, j = 0;
 
 	while (i < argc)
 	{
-		if (atoi(argv[i]) == 0 && *(*(argv + i)) != '0')
+		while (argv[i][j])
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][j]) == 0)
+			{
+				puts("Error");
+				return (1);
+			}
+			j++;
 		}
-		sum += atoi(argv[i]);
 		i++;
 	}
-	printf("%d\n", sum);
+	i = 1;
+	while (i < argc)
+	{
+		a += atoi(argv[i]);
+	}
+	printf("%d\n", a);
 	return (0);
 }
