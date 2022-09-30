@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
 * main - prints file name
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		if (atoi(argv[i]) == 0 && *(*(argv + i)) != '0')
+		if (isdigit(*(argv + i)) == 0)
 		{
 			printf("Error\n");
 			return (1);
