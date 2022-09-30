@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i = 1;
-	
+
 	while (i < argc)
 	{
 		if (atoi(argv[i]) == 0 && *(*(argv + i)) != '0')
