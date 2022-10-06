@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* malloc_checked - allocates memory 
+* malloc_checked - allocates memory
 * @b: interger
 *
 * Return: void pointer
