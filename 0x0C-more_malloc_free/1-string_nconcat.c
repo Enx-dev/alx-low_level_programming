@@ -40,12 +40,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s[k] = s1[k];
 		k++;
 	}
-	k = 0;	
+	k = 0;
 	while (k < j)
 	{
 		s[k + i] = s2[k];
 		k++;
-	}	
+	}
 	s[i + j] = '\0';
 	return (s);
 }
