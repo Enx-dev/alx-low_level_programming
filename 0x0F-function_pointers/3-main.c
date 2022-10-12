@@ -7,7 +7,7 @@
 * @argv: array of agurements
 */
 
-int main(argc, argv[])
+int main(int argc,char *argv[])
 {
 	printf("%d", argc);
 }
