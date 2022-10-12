@@ -10,16 +10,17 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i = 0, r;
+	int i = 0;
+	int r;
 
 	if (size > 0 && array && cmp)
 	{
 		while (i < size)
 		{
 			r = cmp(array[i]);
-			i++;
 			if (r)
 				break;
+			i++;
 		}
 		if (i < size)
 			return (i);
