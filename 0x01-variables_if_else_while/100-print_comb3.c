@@ -16,8 +16,11 @@ int main(void)
 		{
 			putchar('0' + base);
 			putchar('0' + sup);
-			putchar(',');
-			putchar(' ');
+			if (base < 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');

@@ -20,8 +20,11 @@ int main(void)
 				putchar('0' + top);
 				putchar('0' + mid);
 				putchar('0' + bot);
-				putchar(',');
-				putchar(' ');
+				if (top < 7)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
