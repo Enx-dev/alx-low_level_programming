@@ -1,8 +1,8 @@
 /**
- * _strcat - Concats @src to @dest 
+ * _strcat - Concats @src to @dest
  * @src: string to be concatinated
  * @dest: string to be added to
- * 
+ *
  * Return: a pointer to the resulting string
 */
 char *_strcat(char *dest, char *src)
