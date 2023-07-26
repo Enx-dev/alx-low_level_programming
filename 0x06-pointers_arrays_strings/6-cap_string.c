@@ -22,6 +22,10 @@ char *cap_string(char *s)
 				}
 				break;
 			}
+			if (*(s + i) == '\t')
+			{
+				*(s + i) = ' ';
+			}
 		}
 	}
 	return (s);
