@@ -7,8 +7,8 @@
 char *leet(char *s)
 {
 	int i, j;
-	char rp[5] = {'a', 'e' ,'o' ,'t' ,'l'};
-       	char mp[5] = {'4', '3', '0', '7', '1'};
+	char rp[5] = {'a', 'e', 'o', 't', 'l'};
+	char mp[5] = {'4', '3', '0', '7', '1'};
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
