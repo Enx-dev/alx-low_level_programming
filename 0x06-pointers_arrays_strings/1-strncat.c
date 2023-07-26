@@ -1,11 +1,12 @@
 /**
- * _strcat - Concats @src to @dest
- * @src: string to be concatinated
- * @dest: string to be added to
+ * _strncat - add @n bytes of @src to @dest
+ * @dest: destination
+ * @src: source
+ * @n: byte(s)
  *
  * Return: a pointer to the resulting string
 */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -15,7 +16,7 @@ char *_strcat(char *dest, char *src)
 	{
 		i++;
 	}
-	while (*(src + j) != '\0')
+	while (j < n && *(src + j) != '\0')
 	{
 		*(dest + i) = *(src + j);
 		i++;
