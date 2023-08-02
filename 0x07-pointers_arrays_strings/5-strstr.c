@@ -34,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 	if (m == 1)
-	{	
+	{
 		return (p);
 	}
 	else
