@@ -1,35 +1,34 @@
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
+#include <ctype.h>
+
 /**
- * main - adds agurs
- * @argc: length of the aguments
- * @argv: array of the agumentes
+ * main - adds numbers
+ * @argc: number of arguments passed to the function
+ * @argv: argument vector of pointers to strings
  *
- * Return: int
-*/
+ * Return: 0 if no errors, else 1
+ */
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int a, i, j;
 
-	sum = 0;
-	if (argc > 1)
+	a = 0;
+	for (i = 1; i < argc; i++)
 	{
-		for(i = 0; i < argc; i++)
+		for (j = 0; argv[i][j]; j++)
 		{
-			if(isdigit(argv[i]) == 1))
+			if (isdigit(argv[i][j]) == 0)
 			{
-				sum += atoi(argv[i]); 
-			}
-			else
-			{
-				printf("Error");
+				puts("Error");
 				return (1);
 			}
 		}
-		printf("%d", sum);
-		return (0);
 	}
-	printf("0");
+	for (i = 1; i < argc; i++)
+	{
+		a += atoi(argv[i]);
+	}
+	printf("%d\n", a);
 	return (0);
 }
