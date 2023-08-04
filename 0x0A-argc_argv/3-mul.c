@@ -4,7 +4,7 @@
  * main - multiplies two numbers
  * @argc: int
  * @argv: array
- * 
+ *
  * Return: int
 */
 int main(int argc, char *argv[])
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	i = 1;
 	mul = 1;
-	if (argc >= 3)
+	if (argc == 3)
 	{
 		while(i < argc)
 		{
