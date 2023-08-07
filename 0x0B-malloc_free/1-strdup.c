@@ -22,7 +22,7 @@ char *_strdup(char *str)
 		i++;
 	}
 	i = 0;
-	ptr = (char *)malloc(str_size);
+	ptr = (char *)malloc(str_size + 1);
 	if (ptr == NULL)
 	{
 		return (ptr);
@@ -32,6 +32,6 @@ char *_strdup(char *str)
 		*(ptr + i) = *(str + i);
 		i++;
 	}
-
+	*(ptr + i) = '\0';
 	return (ptr);
 }
