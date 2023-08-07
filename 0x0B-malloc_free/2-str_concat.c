@@ -5,29 +5,28 @@
  * @s1: string
  * @s2: string
  *
-*/
+ */
 
-void handlePtr(char *ptr, char *s1, char * s2)
+void handlePtr(char *ptr, char *s1, char *s2)
 {
 	int i, j;
 
 	if (s1 != NULL)
+	{
+		for (i = 0; *(s1 + i) != '\0'; i++, j++)
 		{
-			for (i = 0; *(s1 + i) != '\0'; i++,j++)
-			{
-				*(ptr + j) = *(s1 + i);
-
-			}
+			*(ptr + j) = *(s1 + i);
 		}
+	}
 
-		if (s2 != NULL)
+	if (s2 != NULL)
+	{
+		for (i = 0; *(s2 + i) != '\0'; i++, j++)
 		{
-			for (i = 0; *(s2 + i) != '\0'; i++, j++)
-			{
-				*(ptr + j) = *(s2 + i);
-			}
+			*(ptr + j) = *(s2 + i);
 		}
-		*(ptr + j) = '\0';
+	}
+	*(ptr + j) = '\0';
 }
 
 /**
