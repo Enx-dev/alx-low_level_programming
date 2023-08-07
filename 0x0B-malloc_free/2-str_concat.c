@@ -1,69 +1,40 @@
 #include "main.h"
-/**
- * handlePtr - handles ptr
- * @ptr: pointer
- * @s1: string
- * @s2: string
- *
- */
-
-void handlePtr(char *ptr, char *s1, char *s2)
-{
-	int i, j;
-
-	if (s1 != NULL)
-	{
-		for (i = 0; *(s1 + i) != '\0'; i++, j++)
-		{
-			*(ptr + j) = *(s1 + i);
-		}
-	}
-
-	if (s2 != NULL)
-	{
-		for (i = 0; *(s2 + i) != '\0'; i++, j++)
-		{
-			*(ptr + j) = *(s2 + i);
-		}
-	}
-	*(ptr + j) = '\0';
-}
+#include <stdlib.h>
 
 /**
- * str_concat - concatinates two string
- * @s1: string 1
- * @s2: string 2
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
  *
- * Return: a pointer to the concatinated string
+ * Return: pointer to newly allocated space in memory, or NULL if error
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size, i;
-	char *ptr;
+	unsigned int i, j, k, l;
+	char *s;
 
-	size = 0;
-	if (s1 != NULL)
+	if (s1 == NULL)
+		i = 0;
+	else
 	{
-		for (i = 0; *(s1 + i) != '\0'; i++)
-		{
-			size++;
-		}
+		for (i = 0; s1[i]; i++)
+			;
 	}
-	if (s2 != NULL)
+	if (s2 == NULL)
+		j = 0;
+	else
 	{
-		for (i = 0; *(s2 + i) != '\0'; i++)
-		{
-			size++;
-		}
+		for (j = 0; s2[j]; j++)
+			;
 	}
-	if (size > 0)
-	{
-		ptr = (char *)malloc(size + 1);
-	}
-	if (ptr != NULL)
-	{
-		handlePtr(ptr, s1, s2);
-	}
-
-	return (ptr);
+	k = i + j + 1;
+	s = malloc(k * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	for (l = 0; l < i; l++)
+		s[l] = s1[l];
+	for (l = 0; l < j; l++)
+		s[l + i] = s2[l];
+	s[i + j] = '\0';
+	return (s);
 }
