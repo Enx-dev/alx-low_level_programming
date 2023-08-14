@@ -1,20 +1,47 @@
+#include <stdlib.h>
 #include "dog.h"
+
 /**
- * new_dog - create a new dog
+ * new_dog - creates a new dog
  * @name: name of dog
- * @age: age of the dog
- * @owner: owner of the dog
+ * @age: age of dog
+ * @owner: owner of dog
  *
- * Return: a dog_t type
-*/
+ * Return: pointer to new dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t newDog;
-	dog_t *pd = &newDog;
+	unsigned int nl, ol, i;
+	dog_t *dog;
 
-	(*pd).name = name;
-	(*pd).age = age;
-	(*pd).owner = owner;
-
-	return (pd);
+	if (name == NULL || owner == NULL)
+		return (NULL);
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
+	for (nl = 0; name[nl]; nl++)
+		;
+	nl++;
+	dog->name = malloc(nl * sizeof(char));
+	if (dog->name == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
+	for (i = 0; i < nl; i++)
+		dog->name[i] = name[i];
+	dog->age = age;
+	for (ol = 0; owner[ol]; ol++)
+		;
+	ol++;
+	dog->owner = malloc(ol * sizeof(char));
+	if (dog->owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return (NULL);
+	}
+	for (i = 0; i < ol; i++)
+		dog->owner[i] = owner[i];
+	return (dog);
 }
